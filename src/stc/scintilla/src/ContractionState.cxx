@@ -91,10 +91,10 @@ int ContractionState::DocFromDisplay(int lineDisplay) const {
 	if (OneToOne()) {
 		return lineDisplay;
 	} else {
-		if (lineDisplay <= 0) {
+		if (lineDisplay < 0) {
 			return 0;
 		}
-		if (lineDisplay > LinesDisplayed()) {
+		if (lineDisplay >= LinesDisplayed()) {
 			return displayLines->PartitionFromPosition(LinesDisplayed());
 		}
 		int lineDoc = displayLines->PartitionFromPosition(lineDisplay);

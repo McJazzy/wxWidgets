@@ -7082,7 +7082,7 @@ sptr_t Editor::WndProc(unsigned int iMessage, uptr_t wParam, sptr_t lParam) {
 		break;
 
 	case SCI_HIDELINES:
-		if (wParam > 0)
+		//if (wParam > 0)
 			cs.SetVisible(static_cast<int>(wParam), static_cast<int>(lParam), false);
 		SetScrollBars();
 		Redraw();
